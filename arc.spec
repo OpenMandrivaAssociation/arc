@@ -6,6 +6,7 @@ Source:		%{name}-%{version}.tgz
 Summary:	ARC archive compression utility
 License:	GPL
 Group:		Archiving/Compression 
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 %description
 ARC is used to create and maintain file archives. Many other new archive
 formats exist, but it can stil be useful if you have old .arc files.
