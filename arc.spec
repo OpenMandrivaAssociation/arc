@@ -30,3 +30,23 @@ formats exist, but it can stil be useful if you have old .arc files.
 %{_bindir}/marc
 %{_mandir}/man1/%{name}.1*
 
+
+
+%changelog
+* Thu Dec 09 2010 Oden Eriksson <oeriksson@mandriva.com> 5.21o-5mdv2011.0
++ Revision: 616602
+- the mass rebuild of 2010.0 packages
+
+* Tue Sep 01 2009 Thierry Vignaud <tv@mandriva.org> 5.21o-4mdv2010.0
++ Revision: 424013
+- rebuild
+
+* Tue Jul 22 2008 Thierry Vignaud <tv@mandriva.org> 5.21o-3mdv2009.0
++ Revision: 240430
+- rebuild
+- fix no-buildroot-tag
+
+* Wed Aug 08 2007 Nicolas Vigier <nvigier@mandriva.com> 5.21o-1mdv2008.0
++ Revision: 60124
+- Import arc
+
