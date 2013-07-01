@@ -3,7 +3,7 @@ Version:	5.21o
 Release:	%mkrel 5
 URL:		http://sourceforge.net/projects/arc/
 Source:		%{name}-%{version}.tgz
-Summary:	ARC archive compression utility
+Summary:	Archive compression utility
 License:	GPL
 Group:		Archiving/Compression 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
