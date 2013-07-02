@@ -1,3 +1,5 @@
+%define debug_package %{nil}
+
 Name:		arc
 Version:	5.21o
 Release:	6
@@ -6,6 +8,7 @@ Source:		%{name}-%{version}.tgz
 Summary:	Archive compression utility
 License:	GPL
 Group:		Archiving/Compression 
+
 %description
 ARC is used to create and maintain file archives. Many other new archive
 formats exist, but it can stil be useful if you have old .arc files.
