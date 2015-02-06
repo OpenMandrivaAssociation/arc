@@ -2,7 +2,7 @@
 
 Name:		arc
 Version:	5.21o
-Release:	6
+Release:	7
 URL:		http://sourceforge.net/projects/arc/
 Source:		%{name}-%{version}.tgz
 Summary:	Archive compression utility
