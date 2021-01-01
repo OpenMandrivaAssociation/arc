@@ -1,10 +1,11 @@
 %define debug_package %{nil}
 
 Name:		arc
-Version:	5.21o
-Release:	7
-URL:		http://sourceforge.net/projects/arc/
-Source:		%{name}-%{version}.tgz
+Version:	5.21q
+Release:	1
+URL:		https://github.com/ani6al/arc
+Source:		https://github.com/ani6al/arc/archive/%{version}/arc-%{version}.tar.gz
+Patch0:		arc-5.21q-compile.patch
 Summary:	Archive compression utility
 License:	GPL
 Group:		Archiving/Compression 
@@ -14,40 +15,18 @@ ARC is used to create and maintain file archives. Many other new archive
 formats exist, but it can stil be useful if you have old .arc files.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
-%make
-%{__lzma} arc.1
+%make_build OPT="%{optflags}"
 
 %install
 %{__install} -Dp -m0755 arc %{buildroot}%{_bindir}/arc
 %{__install} -Dp -m0755 marc %{buildroot}%{_bindir}/marc
-%{__install} -Dp -m0644 arc.1.lzma %{buildroot}%{_mandir}/man1/arc.1.lzma
+%{__install} -Dp -m0644 arc.1 %{buildroot}%{_mandir}/man1/arc.1
 
 %files
 %doc Changelog COPYING LICENSE Readme PATCHLEVEL Arcinfo Arc521.doc
 %{_bindir}/%{name}
 %{_bindir}/marc
 %{_mandir}/man1/%{name}.1*
-
-
-
-%changelog
-* Thu Dec 09 2010 Oden Eriksson <oeriksson@mandriva.com> 5.21o-5mdv2011.0
-+ Revision: 616602
-- the mass rebuild of 2010.0 packages
-
-* Tue Sep 01 2009 Thierry Vignaud <tv@mandriva.org> 5.21o-4mdv2010.0
-+ Revision: 424013
-- rebuild
-
-* Tue Jul 22 2008 Thierry Vignaud <tv@mandriva.org> 5.21o-3mdv2009.0
-+ Revision: 240430
-- rebuild
-- fix no-buildroot-tag
-
-* Wed Aug 08 2007 Nicolas Vigier <nvigier@mandriva.com> 5.21o-1mdv2008.0
-+ Revision: 60124
-- Import arc
-

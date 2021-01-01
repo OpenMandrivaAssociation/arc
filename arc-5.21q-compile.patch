@@ -1,0 +1,29 @@
+diff -up arc-5.21q/arclzw.c.omv~ arc-5.21q/arclzw.c
+--- arc-5.21q/arclzw.c.omv~	2021-01-01 19:37:01.515055547 +0100
++++ arc-5.21q/arclzw.c	2021-01-01 19:38:30.814023294 +0100
+@@ -56,8 +56,9 @@ static VOID     putcode();
+ 
+ extern u_char	*pinbuf;
+ u_char		*inbeg, *inend;
+-u_char          *outbuf;
+-u_char          *outbeg, *outend; 
++extern u_char   *outbuf;
++u_char          *outbeg;
++extern u_char   *outend; 
+ 
+ static int      sp;		/* current stack pointer */
+ static int	inflag;
+diff -up arc-5.21q/arcunp.c.omv~ arc-5.21q/arcunp.c
+--- arc-5.21q/arcunp.c.omv~	2021-01-01 19:37:42.711499354 +0100
++++ arc-5.21q/arcunp.c	2021-01-01 19:37:54.121623095 +0100
+@@ -37,8 +37,8 @@ extern int	lastc;
+ #define NOHIST 0		/* no relevant history */
+ #define INREP 1			/* sending a repeated value */
+ 
+-short    crcval;		/* CRC check value */
+-long     stdlen;		/* bytes to read */
++extern short    crcval;		/* CRC check value */
++extern long     stdlen;		/* bytes to read */
+ #if	!DOS
+ static int	gotcr;		/* got a carriage return? */
+ #endif
